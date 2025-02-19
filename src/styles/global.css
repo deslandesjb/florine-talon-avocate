@@ -1,16 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&family=Quattrocento:wght@400;700&display=swap");
 @import "tailwindcss";
 
-/* FIXME won't work with tailwindcss and Astro */
 @theme {
-	--font-roboto: "Roboto", sans-serif;
+	--font-main: "Oswald", sans-serif;
+	--font-second: "Quattrocento", sans-serif;
 
 	--color-aqua-100: #eefff9;
 	--color-aqua-200: #ddfff3;
 	--color-aqua-300: #ccfeee;
 	--color-aqua-400: #bbfee8;
 	--color-aqua-500: #aafee2;
-	--color-aqua-600: #88cbb5;
 	--color-aqua-600: #88cbb5;
 	--color-aqua-700: #669888;
 	--color-aqua-800: #44665a;

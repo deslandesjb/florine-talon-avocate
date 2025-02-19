@@ -1,0 +1,72 @@
+---
+interface Review {
+	name: string;
+	imageSrc: string;
+	review: string;
+}
+
+const reviews: Review[] = [
+	{
+		name: "Nora Jegou",
+		imageSrc: "/src/assets/reviews/florine-talon-avocat-nora-jegou.jpeg",
+		review: "Je recommande Maître Talons, qui me défend dans une affaire depuis maintenant plus d’un an, très investie dans le dossier, je l’est vue me défendre au mois de juillet 2024, j’étais sans voix. Un grand travail derrière tout ça, et ça se ressent à la barre.\nJe précise qu’elle est aussi très réactive au messages, et qu’elle anticipe beaucoup ses dossiers pour avoir tout en mains devant les juges.\nUne grande confiance en cette avocate.",
+	},
+	{
+		name: "Grandet Mehdi",
+		imageSrc: "/src/assets/reviews/florine-talon-avocat-grandet-mehdi.jpeg",
+		review: "Je recommande Maître Florine Talon pour son investissement totale envers ses clients. Très contentieuse accessible et toujours de très bon conseils pour les préparations des dossiers avant les jugements. Puis, à la barre elle est concise, efficace et trouve les mots justes pour défendre ces clients avec assurance et fermeté. \nJ'ai toute confiance en elle et elle a déjà été très efficace pour mon fils à plusieurs reprises. \nGrâce à elle on évite toujours le pire ! \nN hésitez surtout pas à contacter Maître Talon.",
+	},
+	{
+		name: "Eddie Bouzzeza",
+		imageSrc: "/src/assets/reviews/florine-talon-avocat-eddie-bouzzeza.jpeg",
+		review: "Personne très réactive a l écoute de ses clients et de très bon conseil je recommande vivement pour vous accompagner dans vos démarches",
+	},
+];
+---
+
+<section class="mx-auto flex w-fit flex-col items-center pb-8">
+	<div class="mx-auto inline-grid max-w-screen-lg grid-cols-3 gap-4 px-4 pb-8 text-pretty">
+		{
+			reviews.map((review) => (
+				<div class="border-aqua-700 flex max-w-sm flex-col rounded-lg border p-4 shadow-sm">
+					<div>
+						<img class="me-4 h-12 w-12 rounded-full" src={review.imageSrc} alt={`Photo de ${review.name}`} />
+						<div>
+							<p class="font-main">{review.name}</p>
+						</div>
+					</div>
+
+					<div class="my-1 flex items-center space-x-1 rtl:space-x-reverse">
+						<div
+							class="h-4 w-4 bg-yellow-300"
+							style="-webkit-mask: url('/src/assets/reviews/star.svg') no-repeat center;
+    mask: url('/src/assets/reviews/star.svg') no-repeat center;"
+						/>
+						<div
+							class="h-4 w-4 bg-yellow-300"
+							style="-webkit-mask: url('/src/assets/reviews/star.svg') no-repeat center;
+    mask: url('/src/assets/reviews/star.svg') no-repeat center;"
+						/>
+						<div
+							class="h-4 w-4 bg-yellow-300"
+							style="-webkit-mask: url('/src/assets/reviews/star.svg') no-repeat center;
+    mask: url('/src/assets/reviews/star.svg') no-repeat center;"
+						/>
+						<div
+							class="h-4 w-4 bg-yellow-300"
+							style="-webkit-mask: url('/src/assets/reviews/star.svg') no-repeat center;
+    mask: url('/src/assets/reviews/star.svg') no-repeat center;"
+						/>
+						<div
+							class="h-4 w-4 bg-yellow-300"
+							style="-webkit-mask: url('/src/assets/reviews/star.svg') no-repeat center;
+    mask: url('/src/assets/reviews/star.svg') no-repeat center;"
+						/>
+					</div>
+					<p class="my-2 whitespace-pre-line text-gray-500">{review.review}</p>
+				</div>
+			))
+		}
+	</div>
+	<a href="https://www.google.com/search?sca_esv=5c33b0bec17714d5&sxsrf=AHTn8zryKHBmK2hLiYfzZ4I66xCzyhMIqw:1739916647453&uds=ABqPDvztZD_Nu18FR6tNPw2cK_RR0T2GmaheHNkgLFcV17MIu7qz9pmRKL6K11Wy628SCII4ruSwG8rkDLaaWkdLKWggGf4-HcE1yhMwUfxVLNn4JFt-R7Ka1l0AAKseRaYHlS5GzNuc&q=Florine+TALON+AVOCAT+Avis&si=APYL9bs7Hg2KMLB-4tSoTdxuOx8BdRvHbByC_AuVpNyh0x2KzRDvRUhm0xjR8QB80g_fOzzhAtqj3fm8erzyH-1nXRx8V6sjtmSQkSsa6UmpRvmYapcJSZ20Es2squYNPjAeIOhrMlD_UbdQp3VKccxqrgRHYrkQuA%3D%3D&hl=fr-FR&sa=X&ved=2ahUKEwiV_tbNns6LAxXkLtAFHUmZI4cQ_4MLegQIVhAN" class="bg-aqua-500 hover:bg-aqua-700 mt-4 inline-block rounded-lg px-4 py-2 text-black transition-colors duration-100 hover:text-white">Voir tous les avis</a>
+</section>
