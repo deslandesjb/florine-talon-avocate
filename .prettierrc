@@ -3,5 +3,7 @@
 	"printWidth": 8000,
 	"plugins": ["prettier-plugin-astro", "prettier-plugin-tailwindcss"],
 	"pluginSearchDirs": false,
-	"bracketSpacing": false
+	"bracketSpacing": false,
+  "bracketSameLine": true,
+  "htmlWhitespaceSensitivity": "ignore"
 }

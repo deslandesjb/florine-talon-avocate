@@ -24,11 +24,12 @@ const reviews: Review[] = [
 ];
 ---
 
-<section class="mx-auto flex w-fit flex-col items-center pb-8">
+<section class="mx-auto flex w-fit flex-col items-center pb-16">
+	<h3 class="font-main mb-8 text-center text-4xl font-bold" style="background: linear-gradient(to bottom, transparent 50%, #aafee2 50%);">AVIS CLIENTS</h3>
 	<div class="mx-auto inline-grid max-w-screen-lg grid-cols-3 gap-4 px-4 pb-8 text-pretty">
 		{
 			reviews.map((review) => (
-				<div class="border-aqua-700 flex max-w-sm flex-col rounded-lg border p-4 shadow-sm">
+				<div class="scroll-appear border-aqua-700 flex max-w-sm flex-col rounded-lg border p-4 opacity-0 shadow-sm">
 					<div>
 						<img class="me-4 h-12 w-12 rounded-full" src={review.imageSrc} alt={`Photo de ${review.name}`} />
 						<div>
@@ -68,5 +69,5 @@ const reviews: Review[] = [
 			))
 		}
 	</div>
-	<a href="https://www.google.com/search?sca_esv=5c33b0bec17714d5&sxsrf=AHTn8zryKHBmK2hLiYfzZ4I66xCzyhMIqw:1739916647453&uds=ABqPDvztZD_Nu18FR6tNPw2cK_RR0T2GmaheHNkgLFcV17MIu7qz9pmRKL6K11Wy628SCII4ruSwG8rkDLaaWkdLKWggGf4-HcE1yhMwUfxVLNn4JFt-R7Ka1l0AAKseRaYHlS5GzNuc&q=Florine+TALON+AVOCAT+Avis&si=APYL9bs7Hg2KMLB-4tSoTdxuOx8BdRvHbByC_AuVpNyh0x2KzRDvRUhm0xjR8QB80g_fOzzhAtqj3fm8erzyH-1nXRx8V6sjtmSQkSsa6UmpRvmYapcJSZ20Es2squYNPjAeIOhrMlD_UbdQp3VKccxqrgRHYrkQuA%3D%3D&hl=fr-FR&sa=X&ved=2ahUKEwiV_tbNns6LAxXkLtAFHUmZI4cQ_4MLegQIVhAN" class="bg-aqua-500 hover:bg-aqua-700 mt-4 inline-block rounded-lg px-4 py-2 text-black transition-colors duration-100 hover:text-white">Voir tous les avis</a>
+	<a href="https://www.google.com/search?sca_esv=5c33b0bec17714d5&sxsrf=AHTn8zryKHBmK2hLiYfzZ4I66xCzyhMIqw:1739916647453&uds=ABqPDvztZD_Nu18FR6tNPw2cK_RR0T2GmaheHNkgLFcV17MIu7qz9pmRKL6K11Wy628SCII4ruSwG8rkDLaaWkdLKWggGf4-HcE1yhMwUfxVLNn4JFt-R7Ka1l0AAKseRaYHlS5GzNuc&q=Florine+TALON+AVOCAT+Avis&si=APYL9bs7Hg2KMLB-4tSoTdxuOx8BdRvHbByC_AuVpNyh0x2KzRDvRUhm0xjR8QB80g_fOzzhAtqj3fm8erzyH-1nXRx8V6sjtmSQkSsa6UmpRvmYapcJSZ20Es2squYNPjAeIOhrMlD_UbdQp3VKccxqrgRHYrkQuA%3D%3D&hl=fr-FR&sa=X&ved=2ahUKEwiV_tbNns6LAxXkLtAFHUmZI4cQ_4MLegQIVhAN" class="bg-aqua-500 hover:bg-aqua-700 inline-block rounded-lg border px-4 py-2 text-black transition-colors duration-100 hover:text-white">Voir tous les avis</a>
 </section>
