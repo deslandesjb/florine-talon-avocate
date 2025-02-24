@@ -1,25 +1,26 @@
 ---
+import Banner from "../components/Banner.astro";
 import Domainv5 from "../components/Domainv5.astro";
 import Me from "../components/Me.astro";
 import ReviewsCard from "../components/ReviewsCard.astro";
 import Layout from "../layouts/Layout.astro";
+import "splitting/dist/splitting-cells.css";
+import "splitting/dist/splitting.css";
 ---
 
 <Layout>
 	<Me />
 	<main class="relative z-10 rounded-t-xl bg-white">
-		<!-- <hr class="my-8 border-t border-gray-200" /> -->
-		<!-- <Me2 /> -->
-		<!-- <Domain />
-		<hr class="my-8 border-t border-gray-200" />
-		<Domainv2 />
-		<hr class="my-8 border-t border-gray-200" />
-		<Domainv3 />
-		<hr class="my-8 border-t border-gray-200" />
-		<Domainv4 />
-		<hr class="my-8 border-t border-gray-200" /> -->
 		<Domainv5 />
-		<!-- <Reviews /> -->
 		<ReviewsCard />
+		<Banner />
+		<div class="bg-aqua-700 relative z-20 h-screen">
+			<p>test text</p>
+		</div>
 	</main>
 </Layout>
+
+<script>
+	import Splitting from "splitting";
+	Splitting();
+</script>
