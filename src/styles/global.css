@@ -1,9 +1,46 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald&family=Quattrocento:wght@400;700&display=swap");
+@font-face {
+	font-family: "EditorialOld";
+	src: url("/public/fonts/EditorialOld/PPEditorialOld-Regular.otf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "EditorialOld";
+	src: url("/public/fonts/EditorialOld/PPEditorialOld-Italic.otf") format("truetype");
+	font-weight: normal;
+	font-style: italic;
+}
+@font-face {
+	font-family: "EditorialOld";
+	src: url("/public/fonts/EditorialOld/PPEditorialOld-Ultrabold.otf") format("truetype");
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: "EditorialOld";
+	src: url("/public/fonts/EditorialOld/PPEditorialOld-UltraboldItalic.otf") format("truetype");
+	font-weight: bold;
+	font-style: italic;
+}
+@font-face {
+	font-family: "EditorialOld";
+	src: url("/public/fonts/EditorialOld/PPEditorialOld-Ultralight.otf") format("truetype");
+	font-weight: light;
+	font-style: normal;
+}
+@font-face {
+	font-family: "EditorialOld";
+	src: url("/public/fonts/EditorialOld/PPEditorialOld-UltralightItalic.otf") format("truetype");
+	font-weight: light;
+	font-style: italic;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 
 @theme {
-	--font-main: "Oswald", sans-serif;
-	--font-second: "Quattrocento", sans-serif;
+	--font-main: "Montserrat", sans-serif;
+	--font-second: "EditorialOld", serif;
 
 	--color-aqua-100: #eefff9;
 	--color-aqua-200: #ddfff3;
@@ -15,10 +52,10 @@
 	--color-aqua-800: #44665a;
 }
 /* scroll appear */
-.scroll-appear {
+/* .scroll-appear {
 	animation: auto linear scrollAppear both;
 	animation-timeline: view();
-	animation-range: entry 20px cover 120px;
+	animation-range: entry 20px cover 20%;
 }
 
 @keyframes scrollAppear {
@@ -33,56 +70,40 @@
 		opacity: 1;
 		transform: translateY(0px);
 	}
-}
-/* OLD
-.scroll-appear {
-	animation: scrollAppear ease forwards;
-	animation-timeline: view();
-	animation-range: entry 70px cover 150px;
-}
-
-@keyframes scrollAppear {
-	0% {
-		opacity: 0;
-		transform: translateY(5vh);
-	}
-	30% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-		transform: translateY(0px);
-	}
 } */
 
 /* character splitting */
 /* .splitting-opacity .char {
-	opacity: 0.2;
-	animation: splittingOpacity ease-out;
+	animation: auto linear splittingOpacity both;
 	animation-timeline: view();
 	animation-range: entry 0 cover 40%;
-	animation-delay: calc(var(--char-index) * 0.1s);
+	animation-delay: calc(var(--char-index) * 100ms);
 }
 @keyframes splittingOpacity {
 	from {
-		opacity: 0.2;
+		opacity: 0;
+		transform: translateY(100px);
 	}
 	to {
 		opacity: 1;
+		transform: translateY(0px);
 	}
 } */
-
-.splitting-opacity .char {
-	animation: splittingOpacity 2s ease-in-out forwards;
-
-	transition: all 0.25s calc((var(--char-index) + 1) * 0.1s);
-	opacity: 0.2;
+/* .splitting-opacity .char {
+	animation: slide-in 10s linear both;
+	animation-delay: calc(150ms * var(--char-index));
+	animation-timeline: view();
+	animation-range: entry 0 cover 40%;
 }
-@keyframes splittingOpacity {
-	0% {
+
+@keyframes slide-in {
+	from {
 		opacity: 0.2;
+	}
+	5% {
+		opacity: 1;
 	}
 	100% {
 		opacity: 1;
 	}
-}
+} */

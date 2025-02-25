@@ -6,7 +6,7 @@ import "../styles/global.css";
 ---
 
 <!doctype html>
-<html lang="fr">
+<html lang="fr" class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -15,9 +15,71 @@ import "../styles/global.css";
 		<title>Florine Talon</title>
 		<ClientRouter />
 	</head>
-	<body class="text-gray-800">
+	<body class="font-main text-gray-800">
 		<Nav />
 		<slot />
 		<Footer />
+
+		<script>
+			import Splitting from "splitting";
+			Splitting();
+
+			import {gsap} from "gsap/dist/gsap";
+			import {ScrollTrigger} from "gsap/dist/ScrollTrigger";
+			gsap.registerPlugin(ScrollTrigger);
+
+			// navbar effect
+			ScrollTrigger.create({
+				start: "top -80",
+				end: 99999,
+				toggleClass: {className: "navbar--scrolled", targets: ".navbar"},
+			});
+
+			// animation-char
+			const results = Splitting({
+				target: ".reveal-type",
+				by: "chars",
+			});
+
+			results.forEach((splitResult) => {
+				gsap.fromTo(
+					splitResult.chars,
+					{
+						opacity: 0.2,
+					},
+					{
+						opacity: 1,
+						duration: 0.03,
+						stagger: 0.02,
+						scrollTrigger: {
+							trigger: splitResult.el,
+							start: "top 90%",
+							end: "top 50%",
+							scrub: true,
+							markers: false,
+							toggleActions: "play play reverse reverse",
+						},
+					}
+				);
+			});
+
+			// annimation-appear
+			let scrollAppear = gsap.utils.toArray(".scroll-appear");
+			scrollAppear.forEach((element) => {
+				gsap.from(element, {
+					opacity: 0,
+					y: 100,
+					duration: 0.1,
+					scrollTrigger: {
+						trigger: element,
+						start: "top 90%",
+						end: "top 75%",
+						scrub: true,
+						markers: false,
+						toggleActions: "play play reverse reverse",
+					},
+				});
+			});
+		</script>
 	</body>
 </html>
