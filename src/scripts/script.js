@@ -101,21 +101,44 @@ results.forEach((splitResult) => {
 
 // annimation-appear
 let scrollAppear = gsap.utils.toArray(".scroll-appear");
-scrollAppear.forEach((element) => {
+scrollAppear.forEach((element, index) => {
 	gsap.from(element, {
 		opacity: 0,
 		y: 100,
-		duration: 0.1,
+		duration: 0.2,
+		// stagger: 0.2,
+		delay: index * 0.03,
 		scrollTrigger: {
 			trigger: element,
 			start: "top 90%",
 			end: "top 75%",
-			scrub: true,
+			scrub: false,
 			markers: false,
-			toggleActions: "play play reverse reverse",
+			// toggleActions: "play none none reverse",
+			toggleActions: "play none none none",
 		},
 	});
 });
+
+// annimation-appear OLD (without delay)
+// let scrollAppear = gsap.utils.toArray(".scroll-appear");
+// scrollAppear.forEach((element, index) => {
+// 	gsap.from(element, {
+// 		opacity: 0,
+// 		y: 100,
+// 		duration: 0.1,
+// 		stagger: 0.2,
+// 		delay: index * 0.2,
+// 		scrollTrigger: {
+// 			trigger: element,
+// 			start: "top 90%",
+// 			end: "top 75%",
+// 			scrub: true,
+// 			markers: false,
+// 			toggleActions: "play play reverse reverse",
+// 		},
+// 	});
+// });
 
 // let scrollAppearReview = gsap.utils.toArray(".scroll-appear-review");
 // scrollAppearReview.forEach((element) => {

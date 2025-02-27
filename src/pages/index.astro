@@ -4,20 +4,20 @@ import "splitting/dist/splitting.css";
 import Banner from "../components/Banner.astro";
 import Domain from "../components/Domain.astro";
 // import Domainv5 from "../components/Domainv5.astro";
-// import Me from "../components/Me.astro";
+import Me from "../components/Me.astro";
 import ReviewsCard from "../components/ReviewsCard.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-	<!-- <Me /> -->
+	<Me />
 	<main class="relative z-10 rounded-t-xl bg-white">
 		<Domain />
 		<!-- <Domainv5 /> -->
-		<Banner />
 		<ReviewsCard />
-		<div class="bg-aqua-700 relative z-20 h-screen">
-			<p>test text</p>
+		<Banner />
+		<div class="bg-aqua-700 relative z-20 flex h-screen items-center justify-center">
+			<p class="text-white">TEST</p>
 		</div>
 	</main>
 </Layout>
