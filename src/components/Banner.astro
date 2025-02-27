@@ -1,5 +1,11 @@
-<section class="sticky top-0 pt-16">
-	<div class="flex h-96 bg-slate-900 bg-cover bg-left" style="background-image: url('/src/assets/code-penal.jpg');">
-		<!-- <div class="mt-auto mb-14 ml-10"> -->
-	</div>
+---
+import {Image} from "astro:assets";
+---
+
+<section class="sticky top-0 flex">
+	<!-- <div class="mt-auto mb-14 ml-10"> -->
+	<div class="hidden h-96 w-full bg-cover bg-left md:block" style="background-image: url('/src/assets/code-penal.jpg');"></div>
+
+	<Image src="/src/assets/code-penal-mob.jpg" class="h-auto w-full md:hidden" alt="logo" width="44" height="44" />
+	<!-- <img class="h-auto w-full md:hidden" src="/src/assets/code-penal-mob.jpg" alt="code penal" /> -->
 </section>

@@ -26,14 +26,14 @@ const reviews: Review[] = [
 
 <section class="relative z-20 bg-white pt-16">
 	<div class="mx-auto max-w-screen-lg">
-		<h3 class="font-second mb-12 w-fit px-4 text-6xl font-light tracking-tight italic" style="background: linear-gradient(to bottom, transparent 50%, #aafee2 50%);">AVIS CLIENTS</h3>
+		<h3 class="font-second mb-12 w-fit px-4 text-4xl font-light tracking-tight italic md:text-6xl" style="background: linear-gradient(to bottom, transparent 50%, #aafee2 50%);">AVIS CLIENTS</h3>
 		<div class="grid">
 			<div class="mx-auto inline-grid w-full grid-cols-1 gap-4 px-4 pb-8 text-pretty md:max-w-screen-lg md:grid-cols-3">
 				{
 					reviews.map((review) => (
 						<div class="scroll-appear border-aqua-700 flex flex-col rounded-lg border p-4 shadow-sm md:max-w-sm">
 							<div>
-								<img class="h-12 w-12 rounded-full" src={review.imageSrc} alt={`Photo de ${review.name}`} />
+								<img class="h-12 w-12 rounded-full" src={review.imageSrc} alt={`${review.name}`} loading="lazy" />
 								<div>
 									<p class="text-lg font-semibold text-gray-800 italic">{review.name}</p>
 								</div>

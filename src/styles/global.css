@@ -50,6 +50,8 @@
 	--color-aqua-600: #88cbb5;
 	--color-aqua-700: #669888;
 	--color-aqua-800: #44665a;
+
+	--breakpoint-3xl: 1920px;
 }
 /* scroll appear */
 /* .scroll-appear {
