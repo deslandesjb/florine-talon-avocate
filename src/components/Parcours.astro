@@ -1,10 +1,42 @@
-<section>
-	<h1 class="font-main text-aqua-500 text-8xl">Mon parcours</h1>
-	<p>
-		Passionnée de longue date par le droit pénal, il fut pour moi une évidence d’orienter mon parcours universitaire vers cette matière. <br />
-		Ainsi, après un Master 1 Droit pénal et sciences criminelles au sein de l’Université de Reims-Champagne Ardennes, puis un Master 2 Etudes pénales et Criminelles obtenu à l’Université de Lille, j’ai passé l’examen d’entrée dans un Centre Régional de Formation à la Profession d’Avocat à Amiens en 2016 et intégré celui de Lille en vue de l’obtention du Certificat d’Aptitude à la Profession d’Avocat (CAPA) en 2018.<br />
-		J’ai alors prêté serment devant la Cour d’Appel d’ANGERS en décembre 2018 et intégré le Barreau de la ville, au sein duquel j’ai exercé la profession d’avocat durant 3 années et demi, tant en mon nom personnel qu’en qualité de collaboratrice libérale au sein du Département Pénal d’un Cabinet d’avocats.<br />
-		J’ai quitté le MAINE ET LOIRE pour intégrer le Barreau d’Amiens, ville dont je suis originaire, mi-août 2022.<br />
-		Passionnée, réactive et à l’écoute, j’ai à cœur mettre mes connaissances et compétences au service de mes clients, afin de les conseiller et défense leurs intérêts au mieux et dans le respect du serment que j’ai prêté.
+---
+import { Image } from "astro:assets";
+---
+
+<section class="relative flex min-h-[700px] flex-col items-center justify-center xl:h-screen xl:max-h-[810px]">
+	<div class="absolute top-16 right-0 hidden aspect-[2/3] h-auto w-1/6 max-w-sm lg:block">
+		<!-- <img class="h-full w-full object-cover object-top" src="/src/assets/florine-talon.jpg" alt="Florine Talon Avocate" /> -->
+		<Image src="/src/assets/florine-talon.jpg" class="h-full w-full object-cover object-top" alt="Florine Talon Avocate" width="1170" height="1157" loading="eager" />
+	</div>
+	<div class="parcours-slide-right absolute top-16 right-0 hidden aspect-[2/3] h-auto w-1/6 bg-white lg:block"></div>
+	<div class="absolute bottom-16 left-0 hidden aspect-[2/3] h-auto w-1/6 max-w-sm lg:block">
+		<!-- <img class="h-full w-full object-cover object-top" src="/src/assets/florine-talon.jpg" alt="Florine Talon Avocate" /> -->
+		<Image src="/src/assets/florine-talon.jpg" class="h-full w-full object-cover object-top" alt="Florine Talon Avocate" width="1170" height="1157" loading="eager" />
+	</div>
+	<div class="parcours-slide-left absolute bottom-16 left-0 hidden aspect-[2/3] h-auto w-1/6 bg-white lg:block"></div>
+	<div class="relative max-w-2xl">
+		<h2 class="font-second mt-4 mb-4 w-fit px-4 text-4xl font-light tracking-tight italic md:mt-0 md:mb-12 md:text-6xl" style="background: linear-gradient(to bottom, transparent 50%, #aafee2 50%);">MON PARCOURS</h2>
+		<div class="color-gray-600 flex flex-col font-light md:flex-row">
+			<div class="flex-1">
+				<p class="p-4 leading-7">
+					Passionnée de longue date par le droit pénal, il fut pour moi une évidence d’orienter mon parcours universitaire vers cette matière. <br />
+					Ainsi, après un Master 1 Droit pénal et sciences criminelles au sein de l’Université de Reims-Champagne Ardennes, puis un Master 2 Etudes pénales et Criminelles obtenu à l’Université de Lille, j’ai passé l’examen d’entrée dans un Centre Régional de Formation à la Profession d’Avocat à Amiens en 2016 et intégré celui de Lille en vue de l’obtention du Certificat d’Aptitude à la Profession d’Avocat (CAPA) en 2018.<br />
+				</p>
+			</div>
+			<div class="aspect-square w-full md:hidden">
+				<Image src="/src/assets/florine-talon.jpg" class="h-full w-full object-cover object-top" alt="Florine Talon Avocate" width="1170" height="1157" loading="eager" />
+			</div>
+			<div class="flex-1">
+				<p class="p-4 leading-7">
+					J’ai alors prêté serment devant la Cour d’Appel d’ANGERS en décembre 2018 et intégré le Barreau de la ville, au sein duquel j’ai exercé la profession d’avocat durant 3 années et demi, tant en mon nom personnel qu’en qualité de collaboratrice libérale au sein du Département Pénal d’un Cabinet d’avocats.<br />
+					J’ai quitté le MAINE ET LOIRE pour intégrer le Barreau d’Amiens, ville dont je suis originaire, mi-août 2022.<br />
+					Passionnée, réactive et à l’écoute, j’ai à cœur mettre mes connaissances et compétences au service de mes clients, afin de les conseiller et défense leurs intérêts au mieux et dans le respect du serment que j’ai prêté.
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="m-auto max-w-4xl">
+	<p class="reveal-type px-4 py-22 text-3xl" data-splitting>
+		<i>«&nbsp;Je jure, comme avocat, d'exercer mes fonctions avec dignité, conscience, indépendance, probité et humanité&nbsp;»</i>
 	</p>
 </section>

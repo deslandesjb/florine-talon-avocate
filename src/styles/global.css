@@ -50,7 +50,8 @@
 	--color-aqua-600: #88cbb5;
 	--color-aqua-700: #669888;
 	--color-aqua-800: #44665a;
-	/* #f9eee5 */
+	--color-yellowpink-100: #fcf5ef;
+	--color-yellowpink-200: #f9eee5;
 
 	--breakpoint-3xl: 1920px;
 }

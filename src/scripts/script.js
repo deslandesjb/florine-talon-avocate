@@ -1,8 +1,8 @@
 import Splitting from "splitting";
 Splitting();
 
-import {gsap} from "gsap/dist/gsap";
-import {ScrollTrigger} from "gsap/dist/ScrollTrigger";
+import { gsap } from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 // navbar effect
@@ -55,7 +55,7 @@ gsap.from(".loading-appear", {
 	stagger: 0.1,
 });
 
-// animation on load hp
+// animation on menu mobile
 const navCheck = document.querySelector("#nav-check");
 
 navCheck.addEventListener("change", () => {
@@ -90,7 +90,7 @@ results.forEach((splitResult) => {
 			scrollTrigger: {
 				trigger: splitResult.el,
 				start: "top 90%",
-				end: "top 50%",
+				end: "top 40%",
 				scrub: true,
 				markers: false,
 				toggleActions: "play play reverse reverse",
@@ -163,3 +163,31 @@ scrollAppear.forEach((element, index) => {
 // 	e.name = e.name === "menu" ? "close" : "menu";
 // 	navLinks.classList.toggle("top-[9%]");
 // }
+
+gsap.to(".parcours-slide-right", {
+	xPercent: -100,
+	duration: 0.3,
+	stagger: 0.1,
+	scrollTrigger: {
+		trigger: ".parcours-slide-right",
+		start: "top 90%",
+		end: "top 75%",
+		scrub: false,
+		markers: false,
+		toggleActions: "play play reverse reverse",
+	},
+});
+
+gsap.to(".parcours-slide-left", {
+	xPercent: 100,
+	duration: 0.3,
+	stagger: 0.1,
+	scrollTrigger: {
+		trigger: ".parcours-slide-left",
+		start: "top 90%",
+		end: "top 75%",
+		scrub: false,
+		markers: false,
+		toggleActions: "play play none none",
+	},
+});
