@@ -20,7 +20,7 @@ gsap.registerPlugin(ScrollTrigger);
 // 	});
 // });
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("astro:page-load", () => {
 	// animation navbar
 	const showAnim = gsap
 		.from(".navbar", {
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
 				scrollTrigger: {
 					trigger: splitResult.el,
 					start: "top 90%",
-					end: "top 40%",
+					end: "top 30%",
 					scrub: true,
 					markers: false,
 					toggleActions: "play play reverse reverse",

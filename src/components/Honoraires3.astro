@@ -66,9 +66,9 @@ const { faqName } = Astro.props;
 					En fonction de la nature du dossier, la rémunération sera proposée :
 				</p>
 				<ul class="ml-4 list-disc pb-8 pl-4">
-					<li>Dans le cadre d’un honoraire forfaitaire couvrant l’ensemble des diligences du dossier</li>
-					<li>Au moyen d’honoraires fixés en fonction d’un taux horaire couvrant toutes les diligences accomplies par l’avocat (entretiens, courriers, étude du dossier, rédaction, audience…</li>
-					<li>Soit dans le cadre d’une convention qui prévoit, outre un honoraire forfaitaire de base, une part de rémunération, en fonction du résultat</li>
+					<li>Dans le cadre d’un honoraire forfaitaire couvrant l’ensemble des diligences du dossier (entretiens, courriers, étude du dossier, rédaction, audience…)</li>
+					<li>Au moyen d’honoraires fixés en fonction d’un taux horaire</li>
+					<li>Dans le cadre d’une convention qui prévoit, outre un honoraire forfaitaire de base, une part de rémunération en fonction du résultat. L'honoraire de résultat ne peut en effet constituer le seul mode de rémunération des diligences de l'avocat.</li>
 				</ul>
 			</div>
 		</div>
@@ -89,8 +89,8 @@ const { faqName } = Astro.props;
 				<ul class="ml-4 list-disc pb-8 pl-4">
 					<li>Le taux de TVA applicable aux prestations juridiques est de 20%.</li>
 					<li>En fonction de la situation du client, une proposition de règlement des honoraires en plusieurs fois sera envisageable.</li>
+					<li>Dans certaines procédures, un droit de plaidoirie s'élevant à 13€ est applicable, y compris pour les justiciables bénéficiant de l'aide juridictionnelle totale</li>
 					<li>Dans certains domaines, l’intervention au bénéfice de l’aide juridictionnelle pourra être envisagée (link)</li>
-					<li>Un droit de plaidoirie de 13€ est applicable, y compris pour les justiciables bénéficiant de l’aide juridictionnelle totale</li>
 					<li>Certaines assurances de protection juridique prennent en charge tout ou partie des honoraires. Le choix de l’avocat dans ce cas demeure libre.</li>
 					<li>Les consultations téléphoniques et en visioconférence sont payables par avance.</li>
 					<li>Les honoraires peuvent faire l’objet d’une majoration en cas de saisine en urgence.</li>
@@ -139,7 +139,7 @@ const { faqName } = Astro.props;
 	}
 </style>
 <script>
-	document.addEventListener("DOMContentLoaded", function () {
+	document.addEventListener("astro:page-load", function () {
 		let e = document.getElementsByClassName("faq-question"),
 			t = document.getElementsByClassName("faq-answers");
 

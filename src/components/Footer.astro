@@ -1,1 +1,12 @@
-<footer class="bg-aqua-700 relative z-10 h-82 pt-12"></footer>
+---
+import { Image } from "astro:assets";
+---
+
+<footer class="bg-aqua-700 relative z-10 h-82 pt-12">
+	<div>
+		<a href="/" class="flex items-center gap-1">
+			<Image src="/logo.png" class="h-11 w-11" alt="logo" width="44" height="44" loading={"eager"} />
+			<p class="font-main text-2xl font-semibold text-gray-800">Florine Talon <span class="text-aqua-700 font-second font-normal italic">Avocat</span></p>
+		</a>
+	</div>
+</footer>
