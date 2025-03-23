@@ -31,16 +31,21 @@ document.addEventListener("astro:page-load", () => {
 		.progress(1);
 
 	ScrollTrigger.create({
-		start: "top top",
+		start: "top -64",
 		end: "max",
 		markers: false,
 		onUpdate: (self) => {
 			const navCheck = document.querySelector("#nav-check");
 			const windowWidth = window.innerWidth;
+			const scrollY = window.scrollY;
 
-			// Désactive l'animation uniquement si on est en mobile (<= 768px) ET que le menu est ouvert
+			if (scrollY < 64) {
+				showAnim.progress(1);
+				return;
+			}
+
 			if (windowWidth <= 768 && navCheck.checked) {
-				showAnim.progress(1); // Garde la navbar visible
+				showAnim.progress(1);
 				return;
 			}
 
@@ -164,31 +169,52 @@ document.addEventListener("astro:page-load", () => {
 	// 	navLinks.classList.toggle("top-[9%]");
 	// }
 
-	gsap.to(".parcours-slide-right", {
-		xPercent: -100,
-		duration: 0.3,
-		stagger: 0.1,
-		scrollTrigger: {
-			trigger: ".parcours-slide-right",
-			start: "top 90%",
-			end: "top 75%",
-			scrub: false,
-			markers: false,
-			toggleActions: "play play reverse reverse",
-		},
-	});
+	// Animation parcours-slide-right
+	const parcoursSlideRight = document.querySelector(".parcours-slide-right");
+	if (parcoursSlideRight) {
+		gsap.to(".parcours-slide-right", {
+			xPercent: -100,
+			duration: 0.3,
+			stagger: 0.1,
+			scrollTrigger: {
+				trigger: ".parcours-slide-right",
+				start: "top 90%",
+				end: "top 75%",
+				scrub: false,
+				markers: false,
+				toggleActions: "play play reverse reverse",
+			},
+		});
+	}
 
-	gsap.to(".parcours-slide-left", {
-		xPercent: 100,
-		duration: 0.3,
-		stagger: 0.1,
-		scrollTrigger: {
-			trigger: ".parcours-slide-left",
-			start: "top 90%",
-			end: "top 75%",
-			scrub: false,
-			markers: false,
-			toggleActions: "play play none none",
-		},
-	});
+	// Animation parcours-slide-left
+	const parcoursSlideLeft = document.querySelector(".parcours-slide-left");
+	if (parcoursSlideLeft) {
+		gsap.to(".parcours-slide-left", {
+			xPercent: 100,
+			duration: 0.3,
+			stagger: 0.1,
+			scrollTrigger: {
+				trigger: ".parcours-slide-left",
+				start: "top 90%",
+				end: "top 75%",
+				scrub: false,
+				markers: false,
+				toggleActions: "play play none none",
+			},
+		});
+	}
+
+	// Gestion des liens du menu
+	const menuLinks = document.querySelectorAll("a");
+
+	if (menuLinks && navCheck) {
+		menuLinks.forEach((link) => {
+			link.addEventListener("click", () => {
+				if (navCheck.checked) {
+					navCheck.checked = false;
+				}
+			});
+		});
+	}
 });
