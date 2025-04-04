@@ -2,13 +2,13 @@
 import { Image } from "astro:assets";
 ---
 
-<section class="max-w-screen-3xl mx-auto pt-16">
-	<div class="mx-auto w-11/12 md:ml-10 md:w-fit">
+<section class="max-w-screen-3xl mx-auto">
+	<div class="mx-auto flex min-h-[60dvh] w-11/12 flex-col justify-center md:ml-10 md:w-fit">
 		<h3 class="font-second mb-8 w-fit text-4xl font-light tracking-tight italic md:text-6xl">
 			<span class="inline-block px-4" style="background: linear-gradient(to bottom, transparent 50%, #aafee2 50%);">DOMAINES</span><br />
 			<span class="inline-block px-4" style="background: linear-gradient(to bottom, transparent 50%, #aafee2 50%);">D'INTERVENTION</span>
 		</h3>
-		<p class="reveal-type mb-18 max-w-4xl text-3xl" data-splitting>Exerçant en droit pénal, j'interviens tant pour la défense des intérêts d'auteurs que de victimes d'infractions pénales et routières</p>
+		<p class="reveal-type max-w-4xl text-3xl" data-splitting>Exerçant en droit pénal, j'interviens tant pour la défense des intérêts d'auteurs que de victimes d'infractions pénales et routières</p>
 	</div>
 	<div class="mx-auto flex flex-col xl:flex-row">
 		<!-- left -->
@@ -16,21 +16,47 @@ import { Image } from "astro:assets";
 			<div class="flex flex-1 flex-col md:flex-row">
 				<!-- 2 elements -->
 				<div class="scroll-appear bg-aqua-700 relative flex min-h-[clamp(180px,25vw,480px)] flex-1 flex-col justify-center p-16 xl:p-7">
-					<h4 class="relative z-10 text-3xl text-white italic underline">left</h4>
+					<h4 class="text-3xl text-white italic underline">Droit Pénal</h4>
+					<!-- <h5 class="text-xl text-white">I. En phase pré sentencielle</h5>
+					<h5 class="text-xl text-white">II. Devant les juridictions</h5>
+					<h5 class="text-xl text-white">III. En phase post sentencielle</h5> -->
+					<ul class="ml-4 list-[upper-roman] text-xl text-white">
+						<li>En phase pré sentencielle</li>
+						<li>Devant les juridictions</li>
+						<li>En phase post sentencielle</li>
+					</ul>
 				</div>
-				<div class="scroll-appear bg-aqua-600 relative flex min-h-[clamp(180px,25vw,480px)] flex-1 flex-col justify-center p-16 xl:p-7">
-					<h4 class="relative z-10 text-3xl text-white italic underline">right</h4>
+				<div class="scroll-appear relative flex min-h-[clamp(180px,25vw,480px)] flex-1 flex-col justify-center bg-gray-200 p-16 xl:p-7">
+					<h5 class="mb-2 text-xl font-bold">I. En phase pré sentencielle</h5>
+					<ul class="marker:text-aqua-700 ml-4 list-disc">
+						<li>Devant un service d'enquête (en garde à vue, en audition libre, en confrontation)</li>
+						<li>Devant les juridictions (Juge d'instruction, Chambre de l'instruction de la cour d'appel)</li>
+					</ul>
 				</div>
 			</div>
 			<div class="flex flex-1 flex-col md:flex-row-reverse xl:flex-col">
 				<!-- 4 elements -->
 				<!-- 2 top -->
 				<div class="flex flex-1 flex-col xl:flex-row">
-					<div class="scroll-appear bg-aqua-500 relative flex min-h-[clamp(180px,25vw,480px)] flex-1 flex-col justify-center p-16 xl:p-7">
-						<h4 class="relative z-10 text-3xl text-white italic underline">left</h4>
+					<div class="scroll-appear relative flex min-h-[clamp(180px,25vw,480px)] flex-1 flex-col justify-center bg-gray-200 p-16 xl:p-7">
+						<h5 class="mb-2 text-xl font-bold">II. Devant les juridictions</h5>
+						<ul class="marker:text-aqua-700 ml-4 list-disc">
+							<li>Tribunal de police (contraventions)</li>
+							<li>Tribunal correctionnel (délits)</li>
+							<li>Cour d'Assises / Cour criminelle Départementale (crimes)</li>
+							<li>Juge des enfants / tribunal pour enfants</li>
+							<!-- <li>Chambre des appels correctionnels de la cour d'appel (délits et contraventions)</li> -->
+							<li>Chambre correctionnelle de la cour d'appel</li>
+							<li>Chambre spéciale des mineurs</li>
+						</ul>
 					</div>
-					<div class="scroll-appear bg-aqua-400 relative flex min-h-[clamp(180px,25vw,480px)] flex-1 flex-col justify-center p-16 xl:p-7">
-						<h4 class="relative z-10 text-3xl text-white italic underline">right</h4>
+					<div class="scroll-appear relative flex min-h-[clamp(180px,25vw,480px)] flex-1 flex-col justify-center bg-white p-16 xl:p-7">
+						<h5 class="mb-2 text-xl font-bold">III. En phase post sentencielle</h5>
+						<ul class="marker:text-aqua-700 ml-4 list-disc">
+							<li>Dans le cadre des recouvrement de vos indemnisations (fonds de garantie, SARVI, CIVI, assureur)</li>
+							<li>Devant les juridictions d'application des peines</li>
+							<li>Relevé d'une mention de condamnation au casier judiciaire, déchéance ou interdiction</li>
+						</ul>
 					</div>
 				</div>
 
@@ -39,12 +65,8 @@ import { Image } from "astro:assets";
 					<div class="absolute h-full w-full">
 						<Image src="/src/assets/florine-talon.jpg" class="h-full w-full object-cover object-top" alt="Florine Talon Avocate" width="1170" height="1157" />
 					</div>
-					<div class="bg-aqua-500 invisible relative flex min-h-[clamp(180px,25vw,480px)] flex-1 flex-col justify-center p-16 xl:p-7">
-						<h4 class="relative z-10 text-3xl text-white italic underline">left</h4>
-					</div>
-					<div class="bg-aqua-400 invisible relative flex min-h-[clamp(180px,25vw,480px)] flex-1 flex-col justify-center p-16 xl:p-7">
-						<h4 class="relative z-10 text-3xl text-white italic underline">right</h4>
-					</div>
+					<div class="bg-aqua-500 invisible relative flex min-h-[clamp(180px,25vw,480px)] flex-1 flex-col justify-center p-16 xl:p-7"></div>
+					<div class="bg-aqua-400 invisible relative flex min-h-[clamp(180px,25vw,480px)] flex-1 flex-col justify-center p-16 xl:p-7"></div>
 				</div>
 			</div>
 		</div>
@@ -57,31 +79,28 @@ import { Image } from "astro:assets";
 				<!-- 4 elements -->
 				<!-- 2 top -->
 				<div class="invisible hidden flex-1 xl:flex">
-					<div class="bg-aqua-500 relative flex min-h-[clamp(180px,25vw,480px)] flex-1 flex-col justify-center p-16 xl:p-7">
-						<h4 class="relative z-10 text-3xl text-white italic underline">left</h4>
-					</div>
-					<div class="bg-aqua-400 relative flex min-h-[clamp(180px,25vw,480px)] flex-1 flex-col justify-center p-16 xl:p-7">
-						<h4 class="relative z-10 text-3xl text-white italic underline">right</h4>
-					</div>
+					<div class="bg-aqua-500 relative flex min-h-[clamp(180px,25vw,480px)] flex-1 flex-col justify-center p-16 xl:p-7"></div>
+					<div class="bg-aqua-400 relative flex min-h-[clamp(180px,25vw,480px)] flex-1 flex-col justify-center p-16 xl:p-7"></div>
 				</div>
 
 				<!-- 2 bottom hidden and image -->
 				<div class="flex flex-1 flex-row-reverse xl:flex-row">
-					<div class="bg-aqua-500 invisible relative hidden min-h-[clamp(180px,25vw,480px)] flex-1 flex-col justify-center p-16 md:flex xl:p-7">
-						<h4 class="relative z-10 text-3xl text-white italic underline">left</h4>
-					</div>
-					<div class="scroll-appear bg-aqua-400 relative flex min-h-[clamp(180px,25vw,480px)] flex-1 flex-col justify-center p-16 xl:p-7">
-						<h4 class="relative z-10 text-3xl text-white italic underline">right</h4>
+					<div class="bg-aqua-500 invisible relative hidden min-h-[clamp(180px,25vw,480px)] flex-1 flex-col justify-center p-16 md:flex xl:p-7"></div>
+					<div class="scroll-appear bg-aqua-700 relative flex min-h-[clamp(180px,25vw,480px)] flex-1 flex-col justify-center p-16 xl:p-7">
+						<h4 class="mb-2 text-3xl text-white italic underline">Droit Pénitentiaire</h4>
+						<h5 class="text-xl text-white">En Commission de Discipline au sein de l'établissement</h5>
 					</div>
 				</div>
 			</div>
 			<div class="flex flex-1 flex-col md:flex-row">
 				<!-- 2 elements -->
 				<div class="scroll-appear bg-aqua-700 relative flex min-h-[clamp(180px,25vw,480px)] flex-1 flex-col justify-center p-16 xl:p-7">
-					<h4 class="relative z-10 text-3xl text-white italic underline">left</h4>
+					<h4 class="mb-2 text-3xl text-white italic underline">Assistance éducative</h4>
+					<h5 class="text-xl text-white">Devant le Juge des enfants et la chambre spéciale des mineurs</h5>
 				</div>
 				<div class="scroll-appear bg-aqua-600 relative flex min-h-[clamp(180px,25vw,480px)] flex-1 flex-col justify-center p-16 xl:p-7">
-					<h4 class="relative z-10 text-3xl text-white italic underline">right</h4>
+					<h4 class="mb-2 text-3xl text-white italic underline">Hospitalisation d'Office</h4>
+					<h5 class="text-xl text-white">Devant le Juge des libertés et de la détention</h5>
 				</div>
 			</div>
 		</div>
