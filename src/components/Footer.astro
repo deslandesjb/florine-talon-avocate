@@ -2,60 +2,41 @@
 import { Image } from "astro:assets";
 ---
 
-<footer class="bg-aqua-800 relative z-10 flex flex-col shadow-sm">
-	<div class="max-w-screen-3xl mx-auto flex min-h-32 w-full flex-col">
-		<div class="my-4 flex flex-col flex-wrap items-center gap-4 px-4 md:mt-4 md:flex-row">
-			<a href="/" class="flex w-fit items-center gap-1">
+<footer class="bg-aqua-900 relative z-10 flex flex-col shadow-sm">
+	<div class="max-w-screen-3xl mx-auto flex min-h-76 w-full flex-col">
+		<div class="mt-12 mb-8 flex flex-col flex-wrap items-center gap-4 px-12 md:mt-24 md:flex-row md:items-start md:gap-12">
+			<a href="/" class="flex h-6 w-fit items-center gap-1">
 				<Image src="/logo.png" class="h-11 w-11" alt="logo" width="44" height="44" loading={"lazy"} />
 				<p class="font-main text-2xl font-semibold text-white">Florine Talon <span class="text-aqua-200 font-second font-normal italic">Avocat</span></p>
 			</a>
 			<!-- reseaux sociaux -->
-			<div class="font-second mt-1 tracking-wide text-white italic">
-				<!-- <a class="mr-1" href="https://www.instagram.com/florinetalonavocat" target="_blank" rel="noopener noreferrer">INSTAGRAM</a> //
-			<a class="ml-1" href="https://www.facebook.com/florinetalonavocat" target="_blank" rel="noopener noreferrer">FACEBOOK</a> -->
 
-				<a class="mr-1 inline-block" href="https://www.instagram.com/florinetalonavocat" target="_blank" rel="noopener noreferrer">
-					<svg class="h-6 fill-white md:w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-						<title>Instagram</title>
-						<!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-						<path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
-					</svg>
-				</a>
-				<a class="ml-1 inline-block" href="https://www.facebook.com/florinetalonavocat" target="_blank" rel="noopener noreferrer">
-					<svg class="h-6 fill-white md:w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-						<title>Facebook</title>
-						<!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-						<path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"></path>
-					</svg>
-				</a>
+			<div>
+				<div>
+					<p class="text-center text-white md:text-left">12 rue Pierre l'Hermite<br />80000 Amiens<br /><a class="hover:text-aqua-200 underline" href="https://g.co/kgs/umwqTBj" target="_blank">Google Maps</a></p>
+				</div>
 			</div>
+
 			<!-- MENU -->
-			<div class="flex flex-col flex-wrap items-center gap-4 md:ml-auto md:flex-row">
+			<div class="flex flex-col flex-wrap items-center md:items-start">
 				<p class="leading-7">
-					<a class="flex w-fit gap-2 text-white underline transition-all duration-300 hover:opacity-80" href="mailto:contact@florinetalonavocat.fr">
-						<svg class="h-6 w-6 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-							<title>Mail</title>
-							<!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-							<path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"></path>
-						</svg> contact@florinetalonavocat.fr
-					</a>
+					<a class="hover:text-aqua-200 flex w-fit gap-2 text-white underline transition-all duration-300" href="tel:0677454190">06.77.45.41.90</a>
 				</p>
 				<p class="leading-7">
-					<a class="flex w-fit gap-2 text-white underline transition-all duration-300 hover:opacity-80" href="tel:0677454190">
-						<svg class="h-6 w-6 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-							<title>Téléphone</title>
-							<!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-							<path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"></path>
-						</svg> 06.77.45.41.90
-					</a>
+					<a class="hover:text-aqua-200 flex w-fit gap-2 text-white underline transition-all duration-300" href="mailto:contact@florinetalonavocat.fr">contact@florinetalonavocat.fr</a>
 				</p>
+			</div>
+
+			<div class="mt-1 tracking-wide text-white italic md:ml-auto">
+				<a class="hover:text-aqua-200 mr-1" href="https://www.instagram.com/florinetalonavocat" target="_blank" rel="noopener noreferrer">INSTAGRAM</a> //
+				<a class="hover:text-aqua-200 ml-1" href="https://www.facebook.com/florinetalonavocat" target="_blank" rel="noopener noreferrer">FACEBOOK</a>
 			</div>
 		</div>
-		<div class="mt-auto mb-4 flex flex-col-reverse flex-wrap gap-2 px-4 md:flex-row">
-			<p class="text-xs text-white italic">&copy; 2025 Florine Talon Avocat. Tous droits réservés.</p>
+		<div class="mt-auto mb-12 flex flex-col-reverse flex-wrap gap-2 px-12 md:flex-row">
+			<p class="text-xs text-gray-300 italic">&copy; 2025 Florine Talon Avocat. Tous droits réservés.</p>
 			<div class="flex gap-4 md:ml-auto">
-				<a href="/a-propos" class="text-xs text-white italic">A PROPOS</a>
-				<a href="/mentions" class="text-xs text-white italic">MENTIONS LÉGALES</a>
+				<a href="/a-propos" class="hover:text-aqua-200 text-xs text-gray-300 italic">A PROPOS</a>
+				<a href="/mentions" class="hover:text-aqua-200 text-xs text-gray-300 italic">MENTIONS LÉGALES</a>
 			</div>
 		</div>
 	</div>

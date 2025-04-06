@@ -1,15 +1,25 @@
 ---
-import { Image } from "astro:assets";
+
 ---
 
 <section id="contact">
-	<div class="flex">
+	<div class="flex flex-col-reverse md:flex-row">
 		<div class="w-full md:w-2/3">
-			<iframe class="h-[calc(100vh-200px)] w-full md:h-120" title="Florine Talon Avocat" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4707.939345000414!2d2.2975756183570164!3d49.8892971020591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6f0d1d4373989987%3A0x730dc085a93bc76d!2sFlorine%20TALON%20AVOCAT!5e0!3m2!1sfr!2sfr!4v1741103341557!5m2!1sfr!2sfr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			<iframe class="h-[calc(100vh-200px)] w-full md:h-90" title="Florine Talon Avocat" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4707.939345000414!2d2.2975756183570164!3d49.8892971020591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6f0d1d4373989987%3A0x730dc085a93bc76d!2sFlorine%20TALON%20AVOCAT!5e0!3m2!1sfr!2sfr!4v1741103341557!5m2!1sfr!2sfr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 		</div>
 
-		<div class="hidden h-120 w-1/3 md:block">
-			<Image src="/src/assets/florine-talon.jpg" class="object-center-top h-full w-full object-cover" alt="Florine Talon Avocate" width="1170" height="1157" loading={"lazy"} />
+		<!-- scroll-appear bg-aqua-700 relative flex min-h-[clamp(180px,25vw,480px)] flex-1 flex-col justify-center p-16 xl:p-7 -->
+		<div class="bg-aqua-800 w-full px-4 py-16 md:h-90 md:w-1/3 xl:p-16">
+			<!-- <Image src="/src/assets/florine-talon.jpg" class="object-center-top h-full w-full object-cover" alt="Florine Talon Avocate" width="1170" height="1157" loading={"lazy"} /> -->
+			<h2 class="font-second mb-12 text-4xl text-white italic">CONTACTEZ MOI</h2>
+			<div>
+				<p class="text-lg leading-7">
+					<a class="hover:text-aqua-200 flex w-fit gap-2 text-white underline transition-all duration-300" href="tel:0677454190">06.77.45.41.90</a>
+				</p>
+				<p class="text-lg leading-7">
+					<a class="hover:text-aqua-200 flex w-fit gap-2 text-white underline transition-all duration-300" href="mailto:contact@florinetalonavocat.fr">contact@florinetalonavocat.fr</a>
+				</p>
+			</div>
 		</div>
 	</div>
 </section>
