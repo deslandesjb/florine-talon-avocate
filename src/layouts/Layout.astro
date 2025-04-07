@@ -3,6 +3,16 @@ import { ClientRouter } from "astro:transitions";
 import Footer from "../components/Footer.astro";
 import NavBurger from "../components/NavBurger.astro";
 import "../styles/global.css";
+
+interface Props {
+	title: string;
+	description: string;
+}
+
+const { title, description } = Astro.props;
+const siteUrl = "https://florine-talon-avocat.fr";
+const canonicalURL = new URL(Astro.url.pathname, siteUrl);
+const ogImage = new URL("/og-image.jpg", siteUrl);
 ---
 
 <!doctype html>
@@ -12,7 +22,25 @@ import "../styles/global.css";
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/logo.png" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Florine Talon</title>
+		<title>{title}</title>
+		<meta name="description" content={description} />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={canonicalURL} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={ogImage} />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={canonicalURL} />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content={ogImage} />
+
+		<!-- Canonical URL -->
+		<link rel="canonical" href={canonicalURL} />
 
 		<ClientRouter />
 	</head>
