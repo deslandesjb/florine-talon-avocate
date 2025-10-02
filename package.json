@@ -9,9 +9,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/markdown-remark": "^6.3.1",
+    "@astrojs/markdown-remark": "^6.3.7",
     "@tailwindcss/vite": "^4.0.3",
-    "astro": "^5.5.6",
+    "astro": "^5.14.1",
     "cookie": "^1.0.2",
     "esbuild": "^0.25.0",
     "gsap": "^3.12.7",
