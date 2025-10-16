@@ -125,6 +125,27 @@ document.addEventListener("astro:page-load", () => {
 		});
 	});
 
+	// annimation-appear
+	let scrollAppearSlowly = gsap.utils.toArray(".scroll-appear-slow");
+	scrollAppearSlowly.forEach((element, index) => {
+		gsap.from(element, {
+			opacity: 0,
+			y: 100,
+			duration: 0.2,
+			// stagger: 0.2,
+			delay: index * 0.1,
+			scrollTrigger: {
+				trigger: element,
+				start: "top 90%",
+				end: "top 75%",
+				scrub: false,
+				markers: false,
+				// toggleActions: "play none none reverse",
+				toggleActions: "play none none none",
+			},
+		});
+	});
+
 	// annimation-appear OLD (without delay)
 	// let scrollAppear = gsap.utils.toArray(".scroll-appear");
 	// scrollAppear.forEach((element, index) => {
