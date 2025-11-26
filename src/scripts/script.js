@@ -53,12 +53,15 @@ document.addEventListener("astro:page-load", () => {
 		},
 	});
 
-	// animation on load hp
-	gsap.from(".loading-appear", {
-		y: 100,
-		duration: 0.3,
-		stagger: 0.1,
-	});
+	// animation on load hp (uniquement si .loading-appear existe)
+	const loadingAppearElements = document.querySelectorAll(".loading-appear");
+	if (loadingAppearElements.length > 0) {
+		gsap.from(loadingAppearElements, {
+			y: 100,
+			duration: 0.3,
+			stagger: 0.1,
+		});
+	}
 
 	// animation on menu mobile
 	const navCheck = document.querySelector("#nav-check");
