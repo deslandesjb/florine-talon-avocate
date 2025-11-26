@@ -1,22 +1,20 @@
+// mailer.js final version
 import { createTransport } from "nodemailer";
 // const nodemailer = require("nodemailer");
 
-const test = import.meta.env.EMAIL_HOST;
-console.log("test", test);
-
 async function sendEmail(props) {
 	let transporter = createTransport({
-		host: import.meta.env.EMAIL_HOST,
-		port: import.meta.env.EMAIL_PORT,
+		host: process.env.EMAIL_HOST,
+		port: process.env.EMAIL_PORT,
 		auth: {
-			user: import.meta.env.EMAIL,
-			pass: import.meta.env.EMAIL_PASS,
+			user: process.env.EMAIL,
+			pass: process.env.EMAIL_PASS,
 		},
 	});
 
 	let message = {
-		from: import.meta.env.EMAIL,
-		to: import.meta.env.EMAIL,
+		from: process.env.EMAIL,
+		to: process.env.EMAIL,
 		subject: props.subject,
 		html: `<h1>Formulaire de contact</h1><br>
     <b>Nom</b>: ${props.name}<br> 

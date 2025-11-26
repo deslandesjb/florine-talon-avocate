@@ -1,4 +1,5 @@
 ---
+// contact.astro final version
 import Layout from "../layouts/Layout.astro";
 
 import { sendEmail } from "../scripts/mailer";
@@ -8,21 +9,9 @@ export const prerender = false;
 
 let errors = { firstName: "", lastName: "", email: "", tel: "", message: "" };
 if (Astro.request.method === "POST") {
-	console.log("📥 Requête POST reçue");
 	errors = { firstName: "", lastName: "", email: "", tel: "", message: "" };
 	try {
-		// Vérifier le Content-Type
-		const contentType = Astro.request.headers.get("content-type") || "";
-		console.log("Content-Type reçu:", contentType);
-
-		if (!contentType.includes("multipart/form-data") && !contentType.includes("application/x-www-form-urlencoded")) {
-			console.error("❌ Content-Type invalide:", contentType);
-			// Essayer quand même de parser les données
-			console.log("⚠️ Tentative de parsing malgré le Content-Type invalide...");
-		}
-
 		const data = await Astro.request.formData();
-		console.log("✅ FormData parsé avec succès");
 		const firstName = data.get("first-name")?.toString() || "";
 		const lastName = data.get("last-name")?.toString() || "";
 		const email = data.get("email")?.toString() || "";
@@ -46,9 +35,7 @@ if (Astro.request.method === "POST") {
 				html: message,
 				subject: `Nouveau message de contact de ${fullName}`,
 			};
-			console.log("📧 Props envoyés au mailer:", payload);
 			await sendEmail(payload);
-			console.log("Email sent successfully");
 		}
 	} catch (error) {
 		if (error instanceof Error) {
