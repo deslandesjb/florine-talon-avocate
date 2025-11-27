@@ -22,6 +22,16 @@ async function sendEmail(props) {
     <b>Message</b>: ${props.html}`,
 	};
 
+	// Ajouter la pièce jointe si un fichier est fourni
+	if (props.attachment && props.attachment.size > 0) {
+		message.attachments = [
+			{
+				filename: props.attachment.name,
+				content: Buffer.from(await props.attachment.arrayBuffer()),
+			},
+		];
+	}
+
 	let info = await transporter.sendMail(message);
 	return info;
 }
