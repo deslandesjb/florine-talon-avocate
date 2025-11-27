@@ -1,9 +1,6 @@
 import { createTransport } from "nodemailer";
 // const nodemailer = require("nodemailer");
 
-const test = import.meta.env.EMAIL_HOST;
-console.log("test", test);
-
 async function sendEmail(props) {
 	let transporter = createTransport({
 		host: import.meta.env.EMAIL_HOST,
