@@ -80,12 +80,12 @@ document.addEventListener("astro:page-load", () => {
 	});
 
 	// animation-char
-	const results = Splitting({
+	const revealType = Splitting({
 		target: ".reveal-type",
 		by: "chars",
 	});
 
-	results.forEach((splitResult) => {
+	revealType.forEach((splitResult) => {
 		gsap.fromTo(
 			splitResult.chars,
 			{
@@ -103,6 +103,34 @@ document.addEventListener("astro:page-load", () => {
 					markers: false,
 					toggleActions: "play play reverse reverse",
 				},
+			},
+		);
+	});
+
+	// animation-char-onLoad
+	const revealTypeOnload = Splitting({
+		target: ".reveal-type-onload",
+		by: "chars",
+	});
+
+	revealTypeOnload.forEach((splitResult) => {
+		gsap.fromTo(
+			splitResult.chars,
+			{
+				opacity: 0.2,
+			},
+			{
+				opacity: 1,
+				duration: 0.03,
+				stagger: 0.01,
+				// scrollTrigger: {
+				// 	trigger: splitResult.el,
+				// 	start: "top 90%",
+				// 	end: "top 30%",
+				// 	scrub: true,
+				// 	markers: false,
+				// 	toggleActions: "play play reverse reverse",
+				// },
 			},
 		);
 	});

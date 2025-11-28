@@ -12,7 +12,8 @@ async function sendEmail(props) {
 	});
 
 	let message = {
-		from: import.meta.env.EMAIL,
+		// from: import.meta.env.EMAIL,
+		from: props.email,
 		to: import.meta.env.EMAIL,
 		subject: props.subject,
 		html: `<h1>Formulaire de contact</h1><br>
