@@ -12,15 +12,17 @@ async function sendEmail(props) {
 	});
 
 	let message = {
-		// from: import.meta.env.EMAIL,
-		from: props.email,
+		// Utiliser votre email authentifié comme "from" (recommandé pour éviter les problèmes)
+		from: import.meta.env.EMAIL,
+		// Ajouter l'email du client dans "replyTo" pour que vos réponses arrivent au bon endroit
+		replyTo: props.email,
 		to: import.meta.env.EMAIL,
 		subject: props.subject,
 		html: `<h1>Formulaire de contact</h1><br>
     <b>Nom</b>: ${props.name}<br> 
     <b>Email</b>: ${props.email}<br>
     ${props.tel ? `<b>Téléphone</b>: ${props.tel}<br>` : ""}
-    <b>Message</b>: ${props.html}`,
+    <b>Message</b>:<br /> ${props.html}`,
 	};
 
 	// Ajouter la pièce jointe si un fichier est fourni
