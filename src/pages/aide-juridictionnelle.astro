@@ -9,7 +9,7 @@ export const prerender = false;
 	<div class="sticky top-0 flex h-96 bg-slate-900 bg-cover bg-center" style="background-image: url('/img/palais-4.jpg');" aria-label="Palais de justice d'Amiens"></div>
 	<main class="relative bg-white py-8">
 		<section class="m-auto max-w-4xl">
-			<h2 class="font-second mt-4 mb-4 w-fit px-4 text-4xl font-light tracking-tight italic md:mt-0 md:mb-12 md:text-6xl" style="background: linear-gradient(to bottom, transparent 50%, #aafee2 50%);">AIDE JURIDIQUE</h2>
+			<h2 class="font-second mt-4 mb-4 w-fit px-4 text-4xl font-light tracking-tight italic md:mt-0 md:mb-12 md:text-6xl" style="background: linear-gradient(to bottom, transparent 50%, #aafee2 50%);">AIDE JURIDICTIONNELLE</h2>
 			<p class="reveal-type-onload max-w-4xl text-3xl" data-splitting>Pour toute demande de d'aide juridique, veuillez télécharger le dossier ci-dessous et me le retourner via ce formulaire.</p>
 			<!-- <p class="reveal-type max-w-4xl text-3xl" data-splitting>Pour toute demande d'audience, veuillez remplir le formulaire ci-dessous.</p> -->
 			<a class="hover:bg-aqua-700 mx-auto mt-4 inline-block w-fit rounded-lg bg-zinc-800 px-5 py-3 text-lg text-white transition-colors duration-200 hover:text-white" href="/pdf/demande-aide-juridique.zip" target="_blank">Télécharger le dossier à completer</a>
@@ -65,12 +65,12 @@ export const prerender = false;
 						<div class="w-full px-3">
 							<label class="mb-2 block text-xs font-bold tracking-wide text-gray-700 uppercase" for="file_input">Joindre la convocation</label>
 
-							<input type="file" id="file_input" name="file_input" class="block w-fit text-sm text-gray-700 transition-colors duration-200 file:me-4 file:rounded-lg file:border-1 file:border-gray-400 file:bg-gray-200 file:px-4 file:py-2 file:text-sm file:font-semibold file:text-gray-600 hover:file:border-gray-600 file:disabled:pointer-events-none file:disabled:opacity-50" required multiple />
+							<input type="file" id="file_input" name="file_input" class="block w-fit text-sm text-gray-700 transition-colors duration-200 file:me-4 file:cursor-pointer file:rounded-lg file:border-1 file:border-gray-400 file:bg-gray-200 file:px-4 file:py-2 file:text-sm file:font-semibold file:text-gray-600 hover:file:border-gray-600 file:disabled:pointer-events-none file:disabled:opacity-50" required multiple />
 							<p class="mt-1 text-sm text-gray-500" id="file_input_help">PDF (MAX. 1Mo)</p>
 						</div>
 					</div>
 
-					<button type="submit" id="submit-btn" class="bg-aqua-500 hover:bg-aqua-700 mx-auto mt-4 rounded-lg px-5 py-3 text-lg transition-colors duration-200 hover:text-white">Submit</button>
+					<button type="submit" id="submit-btn" class="hover:bg-aqua-700 mx-auto mt-4 inline-block w-fit cursor-pointer rounded-lg bg-zinc-800 px-5 py-3 text-lg text-white transition-colors duration-200 hover:text-white">Submit</button>
 				</form>
 			</div>
 		</div>
