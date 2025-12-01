@@ -15,7 +15,7 @@ import { Image } from 'astro:assets';
 		<div class="flex flex-1 flex-col">
 			<div class="flex flex-1 flex-col md:flex-row">
 				<!-- 2 elements -->
-				<div class="scroll-appear bg-aqua-700 relative flex min-h-[clamp(180px,25vw,480px)] flex-1 flex-col justify-center p-16 xl:p-7">
+				<div class="scroll-appear bg-aqua-700 relative flex min-h-[clamp(180px,25vw,480px)] flex-1 flex-col justify-center p-16 inset-shadow-sm xl:px-7 xl:py-0">
 					<h4 class="text-3xl text-white italic underline">Droit Pénal</h4>
 					<!-- <h5 class="text-xl text-white">I. En phase pré sentencielle</h5>
 					<h5 class="text-xl text-white">II. Devant les juridictions</h5>
@@ -26,7 +26,7 @@ import { Image } from 'astro:assets';
 						<li>En phase post sentencielle</li>
 					</ul>
 				</div>
-				<div class="scroll-appear relative flex min-h-[clamp(180px,25vw,480px)] flex-1 flex-col justify-center bg-gray-200 p-16 xl:p-7">
+				<div class="scroll-appear relative flex min-h-[clamp(180px,25vw,480px)] flex-1 flex-col justify-center bg-gray-200 p-16 inset-shadow-sm xl:px-7 xl:py-0">
 					<h5 class="mb-2 text-xl font-bold">I. En phase pré sentencielle</h5>
 					<ul class="marker:text-aqua-700 ml-4 list-disc">
 						<li>Devant un service d'enquête (en garde à vue, en audition libre, en confrontation)</li>
@@ -38,7 +38,7 @@ import { Image } from 'astro:assets';
 				<!-- 4 elements -->
 				<!-- 2 top -->
 				<div class="flex flex-1 flex-col xl:flex-row">
-					<div class="scroll-appear relative flex min-h-[clamp(180px,25vw,480px)] flex-1 flex-col justify-center bg-gray-100 p-16 xl:p-7">
+					<div class="scroll-appear relative flex min-h-[clamp(180px,25vw,480px)] flex-1 flex-col justify-center bg-gray-100 p-16 inset-shadow-sm xl:px-7 xl:py-0">
 						<h5 class="mb-2 text-xl font-bold">II. Devant les juridictions</h5>
 						<ul class="marker:text-aqua-700 ml-4 list-disc">
 							<li>Tribunal de police (contraventions)</li>
@@ -50,7 +50,7 @@ import { Image } from 'astro:assets';
 							<li>Chambre spéciale des mineurs</li>
 						</ul>
 					</div>
-					<div class="scroll-appear relative flex min-h-[clamp(180px,25vw,480px)] flex-1 flex-col justify-center bg-white p-16 xl:p-7">
+					<div class="scroll-appear relative flex min-h-[clamp(180px,25vw,480px)] flex-1 flex-col justify-center bg-white p-16 inset-shadow-sm xl:px-7 xl:py-0">
 						<h5 class="mb-2 text-xl font-bold">III. En phase post sentencielle</h5>
 						<ul class="marker:text-aqua-700 ml-4 list-disc">
 							<li>Dans le cadre des recouvrements de vos indemnisations (fonds de garantie, assureur)</li>
@@ -61,32 +61,32 @@ import { Image } from 'astro:assets';
 				</div>
 
 				<!-- 2 bottom hidden and image -->
-				<div class="scroll-appear relative hidden flex-1 md:flex">
+				<div class="scroll-appear relative hidden flex-1 inset-shadow-sm md:flex">
 					<div class="absolute h-full w-full">
 						<Image src="/img/florine-talon.jpg" class="h-full w-full object-cover object-top" alt="Florine Talon Avocate - Droit pénal Amiens" width="1170" height="1157" />
 					</div>
-					<div class="bg-aqua-500 invisible relative flex min-h-[clamp(180px,25vw,480px)] flex-1 flex-col justify-center p-16 xl:p-7"></div>
-					<div class="bg-aqua-400 invisible relative flex min-h-[clamp(180px,25vw,480px)] flex-1 flex-col justify-center p-16 xl:p-7"></div>
+					<div class="bg-aqua-500 invisible relative flex min-h-[clamp(180px,25vw,480px)] flex-1 flex-col justify-center p-16 xl:px-7 xl:py-0"></div>
+					<div class="bg-aqua-400 invisible relative flex min-h-[clamp(180px,25vw,480px)] flex-1 flex-col justify-center p-16 xl:px-7 xl:py-0"></div>
 				</div>
 			</div>
 		</div>
 		<!-- right -->
 		<div class="flex flex-1 flex-col md:flex-col-reverse xl:flex-col">
-			<div class="scroll-appear relative flex flex-1 flex-col">
+			<div class="scroll-appear relative flex flex-1 flex-col inset-shadow-sm">
 				<div class="h-full w-full md:absolute">
 					<Image src="/img/florine-talon.jpg" class="ml-0 h-full w-full object-cover object-top md:ml-[50%] md:w-1/2 xl:m-0 xl:w-full" alt="Florine Talon Avocate - Droit pénal Amiens" width="1170" height="1157" />
 				</div>
 				<!-- 4 elements -->
 				<!-- 2 top -->
 				<div class="invisible hidden flex-1 xl:flex">
-					<div class="bg-aqua-500 relative flex min-h-[clamp(180px,25vw,480px)] flex-1 flex-col justify-center p-16 xl:p-7"></div>
-					<div class="bg-aqua-400 relative flex min-h-[clamp(180px,25vw,480px)] flex-1 flex-col justify-center p-16 xl:p-7"></div>
+					<div class="bg-aqua-500 relative flex min-h-[clamp(180px,25vw,480px)] flex-1 flex-col justify-center p-16 xl:px-7 xl:py-0"></div>
+					<div class="bg-aqua-400 relative flex min-h-[clamp(180px,25vw,480px)] flex-1 flex-col justify-center p-16 xl:px-7 xl:py-0"></div>
 				</div>
 
 				<!-- 2 bottom hidden and image -->
 				<div class="flex flex-1 flex-row-reverse xl:flex-row">
-					<div class="bg-aqua-500 invisible relative hidden min-h-[clamp(180px,25vw,480px)] flex-1 flex-col justify-center p-16 md:flex xl:p-7"></div>
-					<div class="scroll-appear bg-aqua-800 relative flex min-h-[clamp(180px,25vw,480px)] flex-1 flex-col justify-center p-16 xl:p-7">
+					<div class="bg-aqua-500 invisible relative hidden min-h-[clamp(180px,25vw,480px)] flex-1 flex-col justify-center p-16 md:flex xl:px-7 xl:py-0"></div>
+					<div class="scroll-appear bg-aqua-800 relative flex min-h-[clamp(180px,25vw,480px)] flex-1 flex-col justify-center p-16 inset-shadow-sm xl:px-7 xl:py-0">
 						<h4 class="mb-2 text-3xl text-white italic underline">Droit Pénitentiaire</h4>
 						<h5 class="text-xl text-white">En Commission de Discipline au sein de l'établissement</h5>
 					</div>
@@ -94,11 +94,11 @@ import { Image } from 'astro:assets';
 			</div>
 			<div class="flex flex-1 flex-col md:flex-row">
 				<!-- 2 elements -->
-				<div class="scroll-appear bg-aqua-700 relative flex min-h-[clamp(180px,25vw,480px)] flex-1 flex-col justify-center p-16 xl:p-7">
+				<div class="scroll-appear bg-aqua-700 relative flex min-h-[clamp(180px,25vw,480px)] flex-1 flex-col justify-center p-16 inset-shadow-sm xl:px-7 xl:py-0">
 					<h4 class="mb-2 text-3xl text-white italic underline">Assistance éducative</h4>
 					<h5 class="text-xl text-white">Devant le Juge des enfants et la chambre spéciale des mineurs</h5>
 				</div>
-				<div class="scroll-appear bg-aqua-600 relative flex min-h-[clamp(180px,25vw,480px)] flex-1 flex-col justify-center p-16 xl:p-7">
+				<div class="scroll-appear bg-aqua-600 relative flex min-h-[clamp(180px,25vw,480px)] flex-1 flex-col justify-center p-16 inset-shadow-sm xl:px-7 xl:py-0">
 					<h4 class="mb-2 text-3xl text-white italic underline">Hospitalisation d'Office</h4>
 					<h5 class="text-xl text-white">Devant le Juge des libertés</h5>
 				</div>
